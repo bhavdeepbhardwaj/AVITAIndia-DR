@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ServiceCenters, WhereToBuys
+from .models import ServiceCenter, WhereToBuy
 
 
 class ServiceCentersAdmin(admin.ModelAdmin):
@@ -18,7 +18,7 @@ class ServiceCentersAdmin(admin.ModelAdmin):
     exclude = ('id',)
 
 
-admin.site.register(ServiceCenters, ServiceCentersAdmin)
+admin.site.register(ServiceCenter, ServiceCentersAdmin)
 
 
 class WhereToBuysAdmin(admin.ModelAdmin):
@@ -37,4 +37,4 @@ class WhereToBuysAdmin(admin.ModelAdmin):
     exclude = ('id',)
 
 
-admin.site.register(WhereToBuys, WhereToBuysAdmin)
+admin.site.register(WhereToBuy, WhereToBuysAdmin)

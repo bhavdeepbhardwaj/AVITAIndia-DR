@@ -26,7 +26,7 @@ class WarrantyExtend(models.Model):
 
 
 # Warranty Registration Model
-class Certificates(models.Model):
+class Certificate(models.Model):
     user_id = models.CharField(verbose_name=_("User ID"), max_length=50, blank=True, null=True)
     order_id = models.CharField(verbose_name=_("Order ID"), max_length=50, blank=True, null=True)
     product_configuration = models.TextField(verbose_name=_("Product Configuration"), max_length=50, blank=True,

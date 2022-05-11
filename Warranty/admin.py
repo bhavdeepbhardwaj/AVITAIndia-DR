@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import WarrantyExtend, WarrantyRegistration, Certificates
+from .models import WarrantyExtend, WarrantyRegistration, Certificate
 
 
 class WarrantyRegistrationAdmin(admin.ModelAdmin):
@@ -51,4 +51,4 @@ class CertificatesAdmin(admin.ModelAdmin):
     exclude = ('id',)
 
 
-admin.site.register(Certificates, CertificatesAdmin)
+admin.site.register(Certificate, CertificatesAdmin)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Banner, Blog, Event, News
+from .models import Banner, Blog, Event, New
 
 
 class BannerAdmin(admin.ModelAdmin):
@@ -64,4 +64,4 @@ class NewAdmin(admin.ModelAdmin):
     # We don't want ids showing up
     exclude = ('id',)
 
-admin.site.register(News, NewAdmin)
+admin.site.register(New, NewAdmin)

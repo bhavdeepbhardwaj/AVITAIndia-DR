@@ -49,7 +49,7 @@ class Event(models.Model):
 
 
 # News Model
-class News(models.Model):
+class New(models.Model):
     country = models.CharField(verbose_name=_("Country "), max_length=50, blank=True, null=True)
     thumbnail_path = models.ImageField(verbose_name=_("Web Image"), upload_to="media/images/News/web", default=None,
                                        blank=True, null=True)

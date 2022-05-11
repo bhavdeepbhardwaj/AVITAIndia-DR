@@ -4,7 +4,7 @@ from django.utils.text import gettext_lazy as _
 
 # Create your models here.
 # ServiceCenters
-class ServiceCenters(models.Model):
+class ServiceCenter(models.Model):
     shop_Name = models.CharField(verbose_name=_("Shop Name"), max_length=50, blank=True, null=True)
     locale = models.CharField(verbose_name=_("Locale"), max_length=50, blank=True, null=True)
     country = models.CharField(verbose_name=_("Country "), max_length=50, blank=True, null=True)
@@ -20,7 +20,7 @@ class ServiceCenters(models.Model):
 
 
 # WhereToBuys
-class WhereToBuys(models.Model):
+class WhereToBuy(models.Model):
     shop_Name = models.CharField(verbose_name=_("Shop Name"), max_length=50, blank=True, null=True)
     locale = models.CharField(verbose_name=_("Locale"), max_length=50, blank=True, null=True)
     country = models.CharField(verbose_name=_("Country "), max_length=50, blank=True, null=True)

@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'Service',
     'Warranty',
     'Articles',
+    'Product',
+    'AVITAIndia',
 ]
 
 MIDDLEWARE = [
