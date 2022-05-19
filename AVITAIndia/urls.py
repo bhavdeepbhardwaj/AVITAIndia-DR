@@ -13,13 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import views as views
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-
 from AVITAIndia import settings
+from Warranty import views
 
 urlpatterns = [
-                  path('', admin.site.urls),
+                  path('', views.homePage),
                   path('admin/', admin.site.urls),
+                  path('api/WarrantyRegistration/', views.WarrantyRegistrationList.as_view(),
+                       name='Warranty Registration List'),
+                  path('api/WarrantyRegistration/create', views.CreateWarrantyRegistration.as_view(),
+                       name='Validate Product'),
+                  path('api/WarrantyRegistration/<int:pk>/', views.UpdateWarrantyRegistration.as_view(),
+                       name='Validate Product'),
+                  path('api/WarrantyRegistration/<int:pk>/delete', views.DeleteWarrantyRegistration.as_view()),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -10,8 +10,9 @@ class WarrantyRegistration(models.Model):
     serial_number = models.CharField(verbose_name=_("Serial Number"), max_length=50, blank=True, null=True)
     reseller_name = models.CharField(verbose_name=_("Reseller Name"), max_length=50, blank=True, null=True)
     purchase_date = models.DateField(verbose_name=_("Purchase Date"), max_length=50, blank=True, null=True)
-    purchase_invoice = models.FileField(verbose_name=_("Purchase Invoice"), upload_to="media/images/purchase_invoice",
-                                        max_length=50, blank=True, null=True)
+    purchase_invoice = models.FileField(verbose_name=_("Purchase Invoice"),
+                                        upload_to="images/Warranty-Registration/purchase_invoice",
+                                        max_length=5000, blank=True, null=True)
 
 
 # Warranty Registration Model
@@ -21,8 +22,9 @@ class WarrantyExtend(models.Model):
     serial_number = models.CharField(verbose_name=_("Serial Number"), max_length=50, blank=True, null=True)
     reseller_name = models.CharField(verbose_name=_("Reseller Name"), max_length=50, blank=True, null=True)
     purchase_date = models.DateField(verbose_name=_("Purchase Date"), max_length=50, blank=True, null=True)
-    purchase_invoice = models.FileField(verbose_name=_("Purchase Invoice"), upload_to="media/images/purchase_invoice",
-                                        max_length=50, blank=True, null=True)
+    purchase_invoice = models.FileField(verbose_name=_("Purchase Invoice"),
+                                        upload_to="images/Warranty-Extend/purchase_invoice",
+                                        max_length=5000, blank=True, null=True)
 
 
 # Warranty Registration Model
