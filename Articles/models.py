@@ -6,9 +6,9 @@ from django.utils.text import gettext_lazy as _
 # Banner Model
 class Banner(models.Model):
     country = models.CharField(verbose_name=_("Country "), max_length=50, blank=True, null=True)
-    thumbnail_path = models.ImageField(verbose_name=_("Web Image"), upload_to="media/images/Banner/web", default=None,
+    thumbnail_path = models.ImageField(verbose_name=_("Web Image"), upload_to="images/Banner/web", default=None,
                                        blank=True, null=True)
-    image_path = models.ImageField(verbose_name=_("Mob Image"), upload_to="media/images/Banner/mob", default=None,
+    image_path = models.ImageField(verbose_name=_("Mob Image"), upload_to="images/Banner/mob", default=None,
                                    blank=True, null=True)
     status = models.CharField(verbose_name=_("Status"), max_length=8,
                               choices=[('Enable', 'Enable'), ('Disable', 'Disable')])
@@ -21,9 +21,9 @@ class Banner(models.Model):
 # Blogs Model
 class Blog(models.Model):
     country = models.CharField(verbose_name=_("Country "), max_length=50, blank=True, null=True)
-    thumbnail_path = models.ImageField(verbose_name=_("Web Image"), upload_to="media/images/Banner/web", default=None,
+    thumbnail_path = models.ImageField(verbose_name=_("Web Image"), upload_to="images/Banner/web", default=None,
                                        blank=True, null=True)
-    image_path = models.ImageField(verbose_name=_("Mob Image"), upload_to="media/images/Banner/mob", default=None,
+    image_path = models.ImageField(verbose_name=_("Mob Image"), upload_to="images/Banner/mob", default=None,
                                    blank=True, null=True)
     is_publish = models.CharField(verbose_name=_("Is Publish"), max_length=8,
                                   choices=[('Enable', 'Enable'), ('Disable', 'Disable')])
@@ -36,9 +36,9 @@ class Blog(models.Model):
 # Event Model
 class Event(models.Model):
     country = models.CharField(verbose_name=_("Country "), max_length=50, blank=True, null=True)
-    thumbnail_path = models.ImageField(verbose_name=_("Web Image"), upload_to="media/images/Event/web", default=None,
+    thumbnail_path = models.ImageField(verbose_name=_("Web Image"), upload_to="images/Event/web", default=None,
                                        blank=True, null=True)
-    image_path = models.ImageField(verbose_name=_("Mob Image"), upload_to="media/images/Event/mob", default=None,
+    image_path = models.ImageField(verbose_name=_("Mob Image"), upload_to="images/Event/mob", default=None,
                                    blank=True, null=True)
     is_publish = models.CharField(verbose_name=_("Is Publish"), max_length=8,
                                   choices=[('Enable', 'Enable'), ('Disable', 'Disable')])
@@ -51,9 +51,9 @@ class Event(models.Model):
 # News Model
 class New(models.Model):
     country = models.CharField(verbose_name=_("Country "), max_length=50, blank=True, null=True)
-    thumbnail_path = models.ImageField(verbose_name=_("Web Image"), upload_to="media/images/News/web", default=None,
+    thumbnail_path = models.ImageField(verbose_name=_("Web Image"), upload_to="images/News/web", default=None,
                                        blank=True, null=True)
-    image_path = models.ImageField(verbose_name=_("Mob Image"), upload_to="media/images/News/mob", default=None,
+    image_path = models.ImageField(verbose_name=_("Mob Image"), upload_to="images/News/mob", default=None,
                                    blank=True, null=True)
     is_publish = models.CharField(verbose_name=_("Is Publish"), max_length=8,
                                   choices=[('Enable', 'Enable'), ('Disable', 'Disable')])
