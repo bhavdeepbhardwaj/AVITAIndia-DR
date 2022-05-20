@@ -43,7 +43,11 @@ INSTALLED_APPS = [
     'Articles',
     'Product',
     'AVITAIndia',
+    'import_export',
+    'django_filters'
 ]
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
