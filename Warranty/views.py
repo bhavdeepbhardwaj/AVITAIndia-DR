@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django_filters.rest_framework import DjangoFilterBackend
-from requests import Response
 from rest_framework import filters
 from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveUpdateAPIView, DestroyAPIView
 from .models import WarrantyRegistration, WarrantyExtend, Certificate
@@ -16,8 +15,9 @@ def homePage(request):
 class WarrantyRegistrationList(ListAPIView):
     queryset = WarrantyRegistration.objects.all()
     serializer_class = WarrantyRegistrationSerializer
-    filter_backends = [DjangoFilterBackend]
-    filters_fields = ['id', 'serial_number']
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = ['id', 'serial_number']
+    search_fields = ['serial_number']
 
 
 # Create POST
